@@ -11,7 +11,20 @@ const GradientFooter = styled('footer')(({ theme }) => ({
   bottom: 0,
   width: '100%',
   zIndex: theme.zIndex.drawer + 1,
- 
+  marginTop: '2rem', /* Add margin at the top */
+  marginBottom: '-2rem',
+
+  [theme.breakpoints.down('md')]: {
+    // Adjust styles for screens smaller than 'md'
+    marginTop: '1rem', // Update margin for smaller screens
+    paddingBottom: '5px', // Adjust paddingBottom for smaller screens
+  },
+
+  [theme.breakpoints.down('sm')]: {
+    // Adjust styles for screens smaller than 'sm'
+    marginTop: '0.5rem', // Update margin for even smaller screens
+    paddingBottom: '2px', // Adjust paddingBottom for even smaller screens
+  },
 }));
 
 const FooterContent = ({ children }) => (

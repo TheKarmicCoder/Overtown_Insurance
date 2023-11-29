@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Navbar from "./components/Navbar";
-
+import "./App.css"
 const theme = createTheme();
 
 const App = () => {

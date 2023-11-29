@@ -1,31 +1,36 @@
-import React from 'react';
 import QuoteForm from '../components/QuoteForm';
 import { Container } from '@mui/material';
 import styled from 'styled-components';
+import { useEffect } from 'react';
+
 
 const CenteredContainer = styled(Container)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 125vh; /* Adjust this to control the height of the centering container */
+  height: 125vh;
   text-align: center;
+  
+  
 
   @media screen and (max-width: 320px) {
-    margin-top: 75rem; /* Adjust the margin-top for smaller screens */
-    margin-bottom: 20rem; /* Adjust the margin-bottom for larger screens */
+    margin-top: 7rem;
+    margin-bottom: 20rem;
   }
 
-  /* Small to medium screens (321px to 768px) */
-  @media screen and (min-width: 321px) and (max-width: 768px) {
-    margin-top: 55rem; /* Adjust the margin-top for smaller screens */
-   
-    
+
+
+  /* Media query for devices with a width between 375px and 425px */
+  @media screen and (min-width: 375px) and (max-width: 425px) {
+    margin-top: 5rem; /* Adjust the top margin to center the form */
+    margin-right: -20rem; /* Adjust the right margin as needed */
+    margin-bottom: 0; /* Adjust the bottom margin as needed */
   }
+
 
   /* Medium screens (769px to 1024px) */
   @media screen and (min-width: 769px) and (max-width: 1024px) {
-    /* Your styles for screens with a width between 769 pixels and 1024 pixels go here */
+   margin-right:  /* Adjust the left margin to center the form */ 
   }
 
   /* Large screens (1025px and above) */
@@ -34,8 +39,12 @@ const CenteredContainer = styled(Container)`
   }
 `;
 
-
 const Contact = () => {
+  useEffect(() => {
+    // Scroll to the top of the page
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <CenteredContainer>
       <QuoteForm />

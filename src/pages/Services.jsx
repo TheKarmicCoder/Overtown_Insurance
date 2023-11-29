@@ -1,15 +1,56 @@
-
 import styled from 'styled-components';
-import serviceData from '../constants/serviceData';
+import serviceData from "../constants/serviceData";
 import { useNavigate } from 'react-router-dom';
 
-
 const Section = styled.section`
+font-family: 'Libre Baskerville', serif;
   height: 100vh;
-  width: 100%;
+  width: 101%;
+  margin-left: -0.7rem;
   display: grid;
   place-items: center;
+  margin-bottom: 23rem; /* Add margin at the bottom */
+
+  @media screen and (max-width: 320px) {
+    & { /* Add higher specificity */
+      margin-top: 1rem;
+      margin-bottom: 225rem;
+      margin-left: -0.2rem;
+    }
+  }
+
+  @media screen and (min-width: 321px) and (max-width: 374px) {
+    & { /* Add higher specificity */
+      margin-top: 1rem;
+      margin-bottom: 225rem;
+    }
+  }
+
+  @media screen and (min-width: 375px) and (max-width: 425px) {
+    & { /* Add higher specificity */
+      margin-top: 1rem;
+      margin-bottom: 200rem;
+      margin-left: 3.2rem;
+    }
+  }
+  
+
+  @media screen and (min-width: 426px) and (max-width: 768px) {
+    & { /* Add higher specificity */
+      margin-top: 1rem;
+      margin-bottom: 85rem;
+      margin-left: 3.2rem;
+    }
+  }
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    & { /* Add higher specificity */
+      margin-top: 1rem;
+      margin-bottom: 65rem;
+    
+    }
+  }
 `;
+
 
 const Row = styled.div`
   display: flex;
@@ -21,33 +62,15 @@ const Column = styled.div`
   padding: 0 1em 1em 1em;
   text-align: center;
 
-  @media screen and (max-width: 320px) {
-    margin-top: 75rem; /* Adjust the margin-top for smaller screens */
-    margin-bottom: 20rem; /* Adjust the margin-bottom for larger screens */
+  @media screen and (min-width: 768px) {
+    flex: 0 50%;
+    max-width: 50%;
   }
 
-  /* Small to medium screens (321px to 768px) */
-  @media screen and (min-width: 321px) and (max-width: 768px) {
-    margin-top: 55rem; /* Adjust the margin-top for smaller screens */
-   
-    
-  }
-
-  /* Medium screens (769px to 1024px) */
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
+  @media screen and (min-width: 992px) {
     flex: 0 0 33.33%;
-    //   max-width: 33.33%;
+    max-width: 33.33%;
   }
-
-  /* Large screens (1025px and above) */
-  @media screen and (min-width: 1025px) {
-    /* Your styles for screens with a width of 1025 pixels and above go here */
-  }
-
-  // @media screen and (min-width: 992px) {
-  //   flex: 0 0 33.33%;
-  //   max-width: 33.33%;
-  // }
 `;
 
 const Card = styled.div`
@@ -109,32 +132,34 @@ const Paragraph = styled.p`
 `;
 
 
-const Services = () => {
+const Service = () => {
   const navigate = useNavigate();
 
-  const navigateToContact = () => {
-    navigate('/contact');
-    window.scrollTo(0, 0);
-  };
-
-  return (
-    <Section>
-      <Row>
-        <h2 className="section-heading">Our Services</h2>
-      </Row>
-      <Row>
-        {serviceData.map((service) => (
-          <Column key={service.id} onClick={navigateToContact}>
-            <Card>
-              <IconWrapper>{service.icon}</IconWrapper>
-              <Heading>{service.title}</Heading>
-              <Paragraph>{service.description}</Paragraph>
-            </Card>
-          </Column>
-        ))}
-      </Row>
-    </Section>
-  );
+const handleServiceClick = () => {
+  // Navigate to the contact page
+  navigate('/contact');
 };
 
-export default Services;
+return (
+  <Section>
+    <Row>
+      <h2 className="section-heading">Our Services</h2>
+    </Row>
+    <Row>
+      {serviceData.map((service) => (
+        <Column key={service.id} onClick={handleServiceClick}>
+          <Card>
+            {/* Render the icon directly from the serviceData */}
+            <IconWrapper>{service.icon}</IconWrapper>
+            <Heading>{service.title}</Heading>
+            <Paragraph>{service.description}</Paragraph>
+          </Card>
+        </Column>
+      ))}
+    </Row>
+  </Section>
+);
+};
+
+
+export default Service;

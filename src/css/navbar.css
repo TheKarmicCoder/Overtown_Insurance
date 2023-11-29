@@ -1,0 +1,32 @@
+/* For screens up to 320px */
+@media screen and (max-width: 320px) {
+    .nav-list {
+      bottom: 0;
+      top: auto;
+    }
+  }
+  
+  /* For screens from 321px to 600px */
+  @media screen and (min-width: 321px) and (max-width: 600px) {
+    .nav-list {
+      bottom: 0;
+      top: auto;
+    }
+  }
+  
+  /* For screens from 601px to 768px */
+  @media screen and (min-width: 601px) and (max-width: 768px) {
+    .nav-list {
+      bottom: 0;
+      top: auto;
+    }
+  }
+  
+  /* For screens from 769px to 1024px */
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .nav-list {
+      bottom: 0;
+      top: auto;
+    }
+  }
+  

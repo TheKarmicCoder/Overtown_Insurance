@@ -1,44 +1,45 @@
-// Home.js
 
-import styled from 'styled-components';
 import Banner from '../components/Banner';
 import Navbar from '../components/Navbar';
 import Intro from "../components/Intro";
 import Services from "../pages/Services";
-import Contact from "../pages/Contact";
+import Container from '@mui/material/Container';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
-const HomeContainer = styled.div`
-  background-color: #f5f5f5; /* Set your desired background color */
-  padding: 0 1rem; /* Adjust padding as needed */
-
-  @media screen and (min-width: 321px) and (max-width: 768px) {
-    padding: 3 2rem; /* Adjust padding for medium screens */
-    
-    margin-left: -20rem; /* Adjust
-    
-
-  }
-
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
-    padding: 0 4rem; /* Adjust padding for large screens */
-  }
-
-  @media screen and (min-width: 1025px) {
-    padding: 0 6rem; /* Adjust padding for extra-large screens */
-  }
-`;
 
 const Home = () => {
+  const theme = useTheme();
+  const isMediumScreen = useMediaQuery(theme.breakpoints.between('md', 'lg'));
+  const isLargeScreen = useMediaQuery(theme.breakpoints.between('lg', 'xl'));
+  const isXLargeScreen = useMediaQuery(theme.breakpoints.up('xl'));
+
   return (
     <>
-    <Navbar />
-    <Banner />
-    <Intro />
-    <Services />
-    <HomeContainer>
-      <Contact />
-      {/* Add clickable sections for navigation */}
-    </HomeContainer>
+      <Navbar />
+      <Banner />
+      <Intro />
+      <Services />
+      <Container
+        sx={{
+          backgroundColor: '#f5f5f5',
+          padding: '0 1rem',
+          
+          [theme.breakpoints.down('sm')]: {
+            padding: '0 2rem',
+            marginLeft: isMediumScreen ? '-20rem' : '0',
+          },
+          [theme.breakpoints.between('lg', 'xl')]: {
+            padding: '0 4rem',
+          },
+          [theme.breakpoints.up('xl')]: {
+            padding: '0 6rem',
+          },
+        }}
+      >
+      
+        {/* Add clickable sections for navigation */}
+      </Container>
     </>
   );
 };

@@ -5,10 +5,12 @@ import styled from 'styled-components';
 
 
 const FormContainer = styled.div`
-  margin-left: 20.5rem; /* Move the form to the left */
+  margin-left: 20.5rem;
   padding: 20px;
   max-width: 500px;
   margin-top: 12rem;
+  font-family: 'Libre Baskerville', serif; /* Apply the Google Font */
+  opacity: 0.9; /* Add opacity */
 
   @media screen and (max-width: 320px) {
     /* Adjust the breakpoint as needed */
@@ -19,20 +21,28 @@ const FormContainer = styled.div`
 
 const FormTitle = styled.h1`
   text-align: center;
+  font-family: 'Libre Baskerville', serif; /* Apply the Google Font */
+  font-weight: bold; /* Apply bold to the title */
+  font-style: italic; /* Apply italic to the title */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Add dark text shadow */
+  opacity: 0.9; /* Add opacity */
 
   @media screen and (max-width: 320px) {
     /* Adjust the breakpoint as needed */
-    
   }
 `;
 
 const FormSubtitle = styled.p`
   text-align: center;
+  font-family: 'Libre Baskerville', serif; /* Apply the Google Font */
+  font-style: regular;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Add dark text shadow */
+  opacity: 0.9; /* Add opacity */
 
   @media screen and (max-width: 320px) {
     /* Adjust the breakpoint as needed */
     white-space: nowrap;
-   margin-left: -5rem;
+    margin-left: -5rem;
     text-overflow: ellipsis;
     font-size: 12px;
   }
