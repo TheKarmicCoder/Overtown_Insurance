@@ -5,9 +5,9 @@ import styled from 'styled-components';
 
 
 const FormContainer = styled.div`
-  margin-left: 20.5rem;
+ 
   padding: 20px;
-  max-width: 500px;
+  max-width: px;
   margin-top: 12rem;
   font-family: 'Libre Baskerville', serif; /* Apply the Google Font */
   opacity: 0.9; /* Add opacity */
@@ -34,15 +34,18 @@ const FormTitle = styled.h1`
 
 const FormSubtitle = styled.p`
   text-align: center;
-  font-family: 'Libre Baskerville', serif; /* Apply the Google Font */
+  font-family: 'Libre Baskerville', serif;
   font-style: regular;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Add dark text shadow */
-  opacity: 0.9; /* Add opacity */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  opacity: 0.9;
 
   @media screen and (max-width: 320px) {
-    /* Adjust the breakpoint as needed */
+    display: none; /* Hide the subtitle on screens with a width of 320px or less */
+  }
+
+  @media screen and (max-width: 320px) {
     white-space: nowrap;
-    margin-left: -5rem;
+    margin-left: -4rem;
     text-overflow: ellipsis;
     font-size: 12px;
   }
@@ -142,7 +145,7 @@ const QuoteForm = () => {
   return (
     <FormContainer>
       <FormTitle>Contact Us</FormTitle>
-      <FormSubtitle>   &nbsp; &nbsp; Don't hesitate to reach out. <br></br> 
+      <FormSubtitle>   Don't hesitate to reach out. <br></br> 
       &nbsp; We will get back to you as soon as possible.</FormSubtitle>
       <form onSubmit={handleSubmit}>
         <FormRow>

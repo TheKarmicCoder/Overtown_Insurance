@@ -7,16 +7,18 @@ const IntroContainer = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: #f5f5f5;
-  padding: 20px;
+  padding: 22px;
 
   /* Small screens (320px and below) */
   @media screen and (max-width: 320px) {
-    /* Your styles for screens with a width of 320 pixels and below go here */
+  margin-left: -1rem;
+  width: 120%;
   }
 
   /* Small to medium screens (321px to 768px) */
   @media screen and (min-width: 321px) and (max-width: 768px) {
     margin-right: -7rem;
+    margin-left: -1.5rem;
   }
 
   /* Medium screens (769px to 1024px) */
@@ -35,9 +37,10 @@ const IntroImage = styled.img`
   border-radius: 8px;
   margin-bottom: 20px;
 
-  @media screen and (min-width: 600px) {
-    max-width: 50%;
+  @media screen and (max-width: 600px) {
+    max-width: 75%;
     margin-bottom: 0;
+    
   }
 `;
 
@@ -47,6 +50,12 @@ const IntroText = styled.p`
   
   strong {
     font-weight: 700; /* Apply bold font weight to the strong element */
+  }
+  @media screen and (max-width: 600px) {
+    max-width: 89%;
+    margin-bottom: 0;
+    margin-left: 2rem;
+    
   }
 `;
 

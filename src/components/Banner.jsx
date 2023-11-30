@@ -15,7 +15,7 @@ const BannerContainer = styled.div`
   opacity: 0.9; /* Adjust the opacity */
   /* Small screens (320px and below) */
   @media screen and (max-width: 320px) {
-    /* Your styles for screens with a width of 320 pixels and below go here */
+    margin-right: -4rem;
   }
 
   /* Small to medium screens (321px to 768px) */
@@ -37,27 +37,28 @@ const BannerContainer = styled.div`
 const BannerContent = styled.div`
   max-width: 800px;
   margin-top: -8rem;
-  margin-left: -20rem;
+  margin-left: -2rem;
 
   /* Small screens (320px and below) */
   @media screen and (max-width: 320px) {
-    margin-left: 4px;
     margin-top: 3px;
+    margin-right: -1.5rem;
+    
   }
 
   /* Small to medium screens (321px to 768px) */
   @media screen and (min-width: 321px) and (max-width: 768px) {
-    /* Your styles for screens with a width between 321 pixels and 768 pixels go here */
+    margin-left:-0.5rem;
   }
 
   /* Medium screens (769px to 1024px) */
   @media screen and (min-width: 769px) and (max-width: 1024px) {
-    /* Your styles for screens with a width between 769 pixels and 1024 pixels go here */
+    margin-left: 2.5rem;
   }
 
   /* Large screens (1025px and above) */
   @media screen and (min-width: 1025px) {
-    /* Your styles for screens with a width of 1025 pixels and above go here */
+    
   }
 `;
 

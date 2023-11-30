@@ -10,42 +10,47 @@ font-family: 'Libre Baskerville', serif;
   display: grid;
   place-items: center;
   margin-bottom: 23rem; /* Add margin at the bottom */
+  margin-top: 5rem;
 
   @media screen and (max-width: 320px) {
     & { /* Add higher specificity */
-      margin-top: 1rem;
+      margin-top: 3rem;
       margin-bottom: 225rem;
-      margin-left: -0.2rem;
+      margin-left: 1rem;
     }
   }
 
   @media screen and (min-width: 321px) and (max-width: 374px) {
     & { /* Add higher specificity */
-      margin-top: 1rem;
+    margin-top: 3rem;
       margin-bottom: 225rem;
+      margin-left: -5px;
     }
   }
 
   @media screen and (min-width: 375px) and (max-width: 425px) {
     & { /* Add higher specificity */
-      margin-top: 1rem;
+    margin-top: 3rem;
       margin-bottom: 200rem;
       margin-left: 3.2rem;
+     
     }
   }
   
 
   @media screen and (min-width: 426px) and (max-width: 768px) {
     & { /* Add higher specificity */
-      margin-top: 1rem;
+    margin-top: 3rem;
       margin-bottom: 85rem;
       margin-left: 3.2rem;
+      
     }
   }
   @media screen and (min-width: 769px) and (max-width: 1024px) {
     & { /* Add higher specificity */
-      margin-top: 1rem;
+    margin-top: 3rem;
       margin-bottom: 65rem;
+      margin-left: -7px;
     
     }
   }

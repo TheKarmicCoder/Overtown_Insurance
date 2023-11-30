@@ -1,4 +1,3 @@
-// Navbar.js
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaHome, FaCogs, FaInfoCircle, FaPhone } from 'react-icons/fa';
@@ -33,7 +32,7 @@ const Navbar = () => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontFamily: 'Libre Baskerville', fontStyle: 'italic', fontWeight: 400, display: { xs: 'none', md: 'block' } }}>
             Overtown Insurance Agency
           </Typography>
-          <ul style={{ listStyle: 'none', display: 'flex', gap: '5px', padding: 0, margin: 0 }}>
+          <ul style={{ listStyle: 'none', display: 'flex', gap: '5px', padding: 0, margin: 0, marginLeft: 'auto' }}>
             <li>
               <Button component={Link} to="/" color="inherit" sx={{ fontFamily: 'Libre Baskerville', fontStyle: 'italic', fontWeight: 400, fontSize: '10px', marginLeft: '-10px', textAlign: 'right' }}>
                 <FaHome style={{ marginRight: '5px', fontSize: '12px' }} />
