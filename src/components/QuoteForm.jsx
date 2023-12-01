@@ -66,18 +66,24 @@ const FormRow = styled.div`
   textarea,
   select {
     width: 100%;
-    background: transparent; /* Set background to transparent */
+    background: transparent;
     border: none;
-    border-bottom: 1px solid #ddd; /* Add a bottom border for the line effect */
+    border-bottom: 1px solid #ddd;
     box-sizing: border-box;
-    outline: none; /* Remove the default input focus outline */
-    
+    outline: none;
+    color: #fff;
+
+    &::placeholder {
+      color: #ddd;
+      text-align: center; /* Center the placeholder text */
+    }
   }
 
   textarea {
     resize: vertical;
   }
 `;
+
 
 const SubmitButton = styled.button`
   background-color: #001f3f; /* Deep Blue */
@@ -154,6 +160,7 @@ const QuoteForm = () => {
             id="name"
             type="text"
             name="name"
+            placeholder="Enter your full name"
             value={formData.name}
             onChange={handleChange}
             autoComplete="name"
@@ -166,6 +173,7 @@ const QuoteForm = () => {
             id="email"
             type="email"
             name="email"
+            placeholder="Enter valid email address"
             value={formData.email}
             onChange={handleChange}
             autoComplete="email"
@@ -178,6 +186,7 @@ const QuoteForm = () => {
             id="phone"
             type="tel"
             name="phone"
+            placeholder="Enter best contact number"
             value={formData.phone}
             onChange={handleChange}
             autoComplete="tel"
@@ -185,10 +194,11 @@ const QuoteForm = () => {
           />
         </FormRow>
         <FormRow>
-          <label htmlFor="message">Message</label>
+          <label htmlFor="message">Quote Info</label>
           <textarea
             id="message"
             name="message"
+            placeholder="Make, Year, Model, VIN Number"
             value={formData.message}
             onChange={handleChange}
             autoComplete="off"

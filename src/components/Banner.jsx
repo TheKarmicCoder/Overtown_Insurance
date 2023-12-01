@@ -4,15 +4,24 @@ import QuoteForm from './QuoteForm';
 
 
 const BannerContainer = styled.div`
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url('/audi.jpg');
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.8) 90%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    url('/audi3.png');
   background-size: cover;
-  background-position: center;
+  background-position: left center; /* Adjust this value to shift the image to the left */
   color: white;
   text-align: center;
   padding: 5rem;
   margin-top: 3rem;
-  font-family: 'Libre Baskerville', serif; /* Apply the Google Font */
-  opacity: 0.9; /* Adjust the opacity */
+  margin-right: -10px;
+  font-family: 'Libre Baskerville', serif;
+  opacity: 0.9;
+
+
   /* Small screens (320px and below) */
   @media screen and (max-width: 320px) {
     margin-right: -4rem;

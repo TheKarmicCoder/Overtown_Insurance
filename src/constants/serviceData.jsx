@@ -44,7 +44,7 @@ const serviceData = [
     id: 6,
     title: 'Notary Services',
     icon: <FaStamp />, // Updated icon
-    description: "Need official document verification? Overtown Insurance Agency offers Notary Public services. Our certified notaries ensure the authenticity and legality of your documents, providing you with the peace of mind that comes with proper documentation."
+    description: "Need official document verification? Overtown Insurance Agency offers Notary Public services. Our 'Certified Notaries' ensure the authenticity and legality of your documents, providing you with the peace of mind that comes with proper documentation."
   },
   {
     id: 7,

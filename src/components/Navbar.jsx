@@ -32,27 +32,27 @@ const Navbar = () => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontFamily: 'Libre Baskerville', fontStyle: 'italic', fontWeight: 400, display: { xs: 'none', md: 'block' } }}>
             Overtown Insurance Agency
           </Typography>
-          <ul style={{ listStyle: 'none', display: 'flex', gap: '5px', padding: 0, margin: 0, marginLeft: 'auto' }}>
+          <ul style={{ listStyle: 'none', display: 'flex', gap: '5px', padding: 0, margin: 1, marginRight: '-25px', '@media (min-width: 1024px)': { marginLeft: '-25px' } }}>
             <li>
-              <Button component={Link} to="/" color="inherit" sx={{ fontFamily: 'Libre Baskerville', fontStyle: 'italic', fontWeight: 400, fontSize: '10px', marginLeft: '-10px', textAlign: 'right' }}>
+              <Button component={Link} to="/" color="inherit" sx={{ fontFamily: 'Libre Baskerville', fontStyle: 'italic', fontWeight: 400, fontSize: '10px', textAlign: 'right' }}>
                 <FaHome style={{ marginRight: '5px', fontSize: '12px' }} />
                 <Typography variant="srOnly">Home</Typography>
               </Button>
             </li>
             <li>
-              <Button component={Link} to="/services" color="inherit" sx={{ fontFamily: 'Libre Baskerville', fontStyle: 'italic', fontWeight: 400, fontSize: '10px', marginLeft: '-10px', textAlign: 'right' }}>
+              <Button component={Link} to="/services" color="inherit" sx={{ fontFamily: 'Libre Baskerville', fontStyle: 'italic', fontWeight: 400, fontSize: '10px', textAlign: 'right' }}>
                 <FaCogs style={{ marginRight: '5px', fontSize: '12px' }} />
                 <Typography variant="srOnly">Services</Typography>
               </Button>
             </li>
             <li>
-              <Button component={Link} to="/about" color="inherit" sx={{ fontFamily: 'Libre Baskerville', fontStyle: 'italic', fontWeight: 400, fontSize: '10px', marginLeft: '-10px', textAlign: 'right' }}>
+              <Button component={Link} to="/about" color="inherit" sx={{ fontFamily: 'Libre Baskerville', fontStyle: 'italic', fontWeight: 400, fontSize: '10px', textAlign: 'right' }}>
                 <FaInfoCircle style={{ marginRight: '5px', fontSize: '12px' }} />
                 <Typography variant="srOnly">About</Typography>
               </Button>
             </li>
             <li>
-              <Button component={Link} to="/contact" color="inherit" sx={{ fontFamily: 'Libre Baskerville', fontStyle: 'italic', fontWeight: 400, fontSize: '10px', marginLeft: '-10px', textAlign: 'right' }}>
+              <Button component={Link} to="/contact" color="inherit" sx={{ fontFamily: 'Libre Baskerville', fontStyle: 'italic', fontWeight: 400, fontSize: '10px', textAlign: 'right' }}>
                 <FaPhone style={{ marginRight: '5px', fontSize: '12px' }} />
                 <Typography variant="srOnly">Contact</Typography>
               </Button>

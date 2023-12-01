@@ -10,16 +10,17 @@ const CenteredContainer = styled(Container)`
   justify-content: center;
   height: 100vh; /* Adjust this to control the height of the centering container */
   text-align: center;
-  margin-top: 15rem;
+  margin-top: -5rem;
 
   @media screen and (max-width: 320px) {
-    margin-top: 7rem; /* Adjust the margin-top for smaller screens */
+    margin-top: 1rem; /* Adjust the margin-top for smaller screens */
     margin-bottom: 20rem; /* Adjust the margin-bottom for larger screens */
+    margin-left: -0.5rem;
   }
 
   /* Small to medium screens (min-width: 321px ) and (max-width: 425px) */
   @media screen and (min-width: 321px) and (max-width: 425px) {
-    margin-top: 7rem; /* Adjust the margin-top for small to medium screens */
+    margin-top: -6rem; /* Adjust the margin-top for small to medium screens */
     margin-bottom: 0; /* Adjust the margin-bottom for small to medium screens */
     
   }
