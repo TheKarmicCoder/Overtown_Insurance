@@ -120,7 +120,7 @@ const QuoteForm = () => {
     const { name, email, phone, message, image } = formData;
 
     // Create mailto link
-    const mailtoLink = `mailto:jaygolden93@gmail.com?subject=New Form Submission&body=Name: ${name}%0D%0APhone: ${phone}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
+    const mailtoLink = `mailto:overtowninsurance@gmail.com?subject=New Form Submission&body=Name: ${name}%0D%0APhone: ${phone}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
 
     // Open the default email client
     window.location.href = mailtoLink;

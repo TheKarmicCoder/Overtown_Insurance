@@ -38,7 +38,7 @@ const serviceData = [
     id: 5,
     title: 'Life Insurance',
     icon: <FaUserShield />,
-    description: "Safeguard the financial future of your loved ones with Overtown Insurance Agency's Life Insurance solutions. Our policies offer peace of mind, providing financial support to your family in the event of your passing. Choose from various coverage options to suit your unique needs."
+    description: "Safeguard the financial future of your loved ones with Life Insurance solutions offered through La Voz Solutions, a trusted partner. Our policies offer peace of mind, providing financial support to your family in the event of your passing. Choose from various coverage options to suit your unique needs."
   },
   {
     id: 6,
@@ -56,7 +56,8 @@ const serviceData = [
     id: 8,
     title: 'Tax Services',
     icon: <FaFileInvoice />, // Updated icon
-    description: "Trust Overtown Insurance Agency for your tax needs. Our comprehensive Tax Services include electronic filing of your Federal, State, and Local Taxes. Let our experienced team navigate the tax landscape for you, ensuring compliance and maximizing your returns."
+    description: 
+    "Trust La Voz Solutions for your tax needs. Our comprehensive Tax Services include electronic filing of your Federal, State, and Local Taxes. Let our experienced team navigate the tax landscape for you, ensuring compliance and maximizing your returns."
   },
   // Add more services as needed
 ];
