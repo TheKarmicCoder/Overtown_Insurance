@@ -1,35 +1,32 @@
-// QuoteForm.js
+// Inside QuoteForm.js
 import { useState } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 
-
 const FormContainer = styled.div`
- 
   padding: 20px;
   max-width: px;
   margin-top: 12rem;
-  font-family: 'Libre Baskerville', serif; /* Apply the Google Font */
-  opacity: 0.9; /* Add opacity */
+  font-family: 'Libre Baskerville', serif;
+  opacity: 0.9;
+  text-align: center;
 
-  @media screen and (max-width: 320px) {
-    /* Adjust the breakpoint as needed */
-    margin-left: 1rem;
-    margin-top: -10px;
+  input,
+  textarea {
+    color: ${props => (props.isContactPage ? 'black' : 'white')};
+    &::placeholder {
+      color: ${props => (props.isContactPage ? 'black' : 'white')};
+    }
   }
 `;
 
 const FormTitle = styled.h1`
   text-align: center;
-  font-family: 'Libre Baskerville', serif; /* Apply the Google Font */
-  font-weight: bold; /* Apply bold to the title */
-  font-style: italic; /* Apply italic to the title */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Add dark text shadow */
-  opacity: 0.9; /* Add opacity */
-
-  @media screen and (max-width: 320px) {
-    /* Adjust the breakpoint as needed */
-  }
+  font-family: 'Libre Baskerville', serif;
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  opacity: 0.9;
 `;
 
 const FormSubtitle = styled.p`
@@ -40,7 +37,7 @@ const FormSubtitle = styled.p`
   opacity: 0.9;
 
   @media screen and (max-width: 320px) {
-    display: none; /* Hide the subtitle on screens with a width of 320px or less */
+    display: none;
   }
 
   @media screen and (max-width: 320px) {
@@ -50,8 +47,6 @@ const FormSubtitle = styled.p`
     font-size: 12px;
   }
 `;
-
-
 
 const FormRow = styled.div`
   margin-bottom: 15px;
@@ -71,11 +66,13 @@ const FormRow = styled.div`
     border-bottom: 1px solid #ddd;
     box-sizing: border-box;
     outline: none;
-    color: #fff;
+    color: inherit; /* inherit the text color from the parent */
+    padding: 5px;
+    text-align: center;
 
     &::placeholder {
-      color: #ddd;
-      text-align: center; /* Center the placeholder text */
+      color: inherit; /* inherit the placeholder color from the parent */
+      text-align: center;
     }
   }
 
@@ -84,9 +81,8 @@ const FormRow = styled.div`
   }
 `;
 
-
 const SubmitButton = styled.button`
-  background-color: #001f3f; /* Deep Blue */
+  background-color: #001f3f;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -94,9 +90,7 @@ const SubmitButton = styled.button`
   cursor: pointer;
 `;
 
-
-
-const QuoteForm = () => {
+const QuoteForm = ({ isContactPage }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -119,13 +113,9 @@ const QuoteForm = () => {
 
     const { name, email, phone, message, image } = formData;
 
-    // Create mailto link
     const mailtoLink = `mailto:overtowninsurance@gmail.com?subject=New Form Submission&body=Name: ${name}%0D%0APhone: ${phone}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
-
-    // Open the default email client
     window.location.href = mailtoLink;
 
-    // Create FormData object to send the form data, including the image
     const formDataToSend = new FormData();
     formDataToSend.append('name', name);
     formDataToSend.append('email', email);
@@ -141,18 +131,15 @@ const QuoteForm = () => {
       });
 
       console.log('Form submitted successfully', response.data);
-      // Handle success, e.g., show a success message or redirect
     } catch (error) {
       console.error('Error submitting form:', error);
-      // Handle failure, e.g., show an error message
     }
   };
 
   return (
-    <FormContainer>
+    <FormContainer isContactPage={isContactPage}>
       <FormTitle>Contact Us</FormTitle>
-      <FormSubtitle>   Don't hesitate to reach out. <br></br> 
-      &nbsp; We will get back to you as soon as possible.</FormSubtitle>
+      <FormSubtitle>Don't hesitate to reach out. <br /> We will get back to you as soon as possible.</FormSubtitle>
       <form onSubmit={handleSubmit}>
         <FormRow>
           <label htmlFor="name">Name</label>
@@ -205,17 +192,6 @@ const QuoteForm = () => {
             required
           />
         </FormRow>
-        {/* <FormRow>
-          <label htmlFor="image">Image</label>
-          <input
-            id="image"
-            type="file"
-            name="image"
-            onChange={handleChange}
-            accept="image/*"
-            required
-          />
-        </FormRow> */}
         <SubmitButton type="submit">Get Quote</SubmitButton>
       </form>
     </FormContainer>

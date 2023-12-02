@@ -1,4 +1,4 @@
-
+// Inside Contact.js
 import QuoteForm from '../components/QuoteForm';
 import { Container } from '@mui/material';
 import styled from 'styled-components';
@@ -8,29 +8,25 @@ const CenteredContainer = styled(Container)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Adjust this to control the height of the centering container */
+  height: 100vh;
   text-align: center;
   margin-top: -5rem;
 
   @media screen and (max-width: 320px) {
-    margin-top: 1rem; /* Adjust the margin-top for smaller screens */
-    margin-bottom: 20rem; /* Adjust the margin-bottom for larger screens */
+    margin-top: 1rem;
+    margin-bottom: 20rem;
     margin-left: -0.5rem;
   }
 
-  /* Small to medium screens (min-width: 321px ) and (max-width: 425px) */
   @media screen and (min-width: 321px) and (max-width: 425px) {
-    margin-top: -6rem; /* Adjust the margin-top for small to medium screens */
-    margin-bottom: 0; /* Adjust the margin-bottom for small to medium screens */
-    
+    margin-top: -6rem;
+    margin-bottom: 0;
   }
 
-  /* Medium screens (769px to 1024px) */
   @media screen and (min-width: 769px) and (max-width: 1024px) {
     /* Your styles for screens with a width between 769 pixels and 1024 pixels go here */
   }
 
-  /* Large screens (1025px and above) */
   @media screen and (min-width: 1025px) {
     /* Your styles for screens with a width of 1025 pixels and above go here */
   }
@@ -39,7 +35,7 @@ const CenteredContainer = styled(Container)`
 const Contact = () => {
   return (
     <CenteredContainer>
-      <QuoteForm />
+      <QuoteForm className="contact-page" />
     </CenteredContainer>
   );
 };
